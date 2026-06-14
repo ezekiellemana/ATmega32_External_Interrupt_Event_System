@@ -1,0 +1,19 @@
+# Compiled intermediate build artifacts
+*.elf
+*.o
+*.d
+
+# Build output directories
+build/
+dist/
+
+# IDE / toolchain cache
+.cache/
+.vscode/ipch/
+
+# OS junk
+Thumbs.db
+.DS_Store
+
+# NOTE: firmware/hex/emergency_event_counter.hex is intentionally NOT ignored.
+# The HEX file is required for SimulIDE simulation and project submission.

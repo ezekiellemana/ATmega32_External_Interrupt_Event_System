@@ -142,17 +142,19 @@ ATmega32_External_Interrupt_Event_System/
 
 ## Repository Submission Status
 
+**GitHub repository:** [ezekiellemana/ATmega32_External_Interrupt_Event_System](https://github.com/ezekiellemana/ATmega32_External_Interrupt_Event_System)
+
 | Deliverable | File / Location | Status |
 | --- | --- | --- |
 | Firmware source code | `firmware/src/main.c` | **Complete** |
 | Compiled HEX file | `firmware/hex/emergency_event_counter.hex` | **Complete** — 1307 bytes, 4.0% of 32 KB flash |
+| GitHub repository | [ezekiellemana/ATmega32_External_Interrupt_Event_System](https://github.com/ezekiellemana/ATmega32_External_Interrupt_Event_System) | **Published** |
 | SimulIDE circuit file | `simulide/circuit/emergency_event_counter.sim1` | Pending — wire and save manually in SimulIDE |
 | SimulIDE screenshots (×6) | `simulide/screenshots/01_–06_*.png` | Pending — capture manually after simulation |
 | KiCad schematic | `kicad/schematic/*.kicad_sch` | Pending — draw manually in KiCad |
 | KiCad PCB layout | `kicad/pcb/*.kicad_pcb` | Pending — route manually in KiCad |
 | Gerber + drill files | `kicad/gerber/` | Pending — export from KiCad after PCB is complete |
 | Demonstration video link | `media/demonstration_video_link.txt` | Pending — paste link after recording |
-| GitHub repository | Remote push | Pending — use GitHub Desktop (see below) |
 
 ---
 

@@ -201,3 +201,18 @@ Use this before pressing Run to catch missing wires:
 - [ ] PD1 (pin 15) → SerialTerm RX (or use built-in serial monitor)
 - [ ] Firmware loaded: `firmware/hex/emergency_event_counter.hex`
 - [ ] Frequency set to 8000000 Hz
+
+---
+
+## Important SimulIDE Reset Fix
+
+If the firmware does not run, check the RESET pin first. In SimulIDE the ATmega32 RESET pin must be held HIGH during normal operation.
+
+Working method:
+
+```text
++5V source → RESET pin
+GND of the source → circuit GND
+```
+
+A reset button can still pull RESET to GND when pressed, but during normal running RESET must not float.

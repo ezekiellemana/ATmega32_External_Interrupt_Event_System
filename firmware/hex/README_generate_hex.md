@@ -2,29 +2,44 @@
 
 ## Status
 
-`emergency_event_counter.hex` has been generated and is present in this folder.
-
-**Build verified on 2026-06-14:**
+The final compiled HEX file is present in this folder:
 
 ```text
-Device:  ATmega32
-Program: 1307 bytes (4.0% of 32 KB flash)
-Data:    114 bytes (5.6% of 2 KB SRAM)
+firmware/hex/emergency_event_counter.hex
 ```
 
-Load this file into SimulIDE or flash it to hardware using AVRDude or MPLAB IPE.
+Use this HEX file in SimulIDE:
+
+```text
+ATmega32 → Load Firmware → emergency_event_counter.hex
+```
+
+Verified build summary:
+
+```text
+Device:  ATmega32 / ATmega32A
+Clock:   8 MHz
+Flash:   approximately 1403 bytes, about 4.3% of 32 KB
+SRAM:    approximately 80 bytes, about 3.9% of 2 KB
+Warnings: 0
+Errors:   0
+```
+
+Only the final `.hex` file is kept in this cleaned submission folder. Intermediate `.elf` files and diagnostic firmware have been removed because they are not required for final submission.
 
 ---
 
 ## Regenerating the HEX File
 
-If you modify `firmware/src/main.c`, rebuild using one of these methods.
+If `firmware/src/main.c` is modified, rebuild using MPLAB for VS Code or AVR-GCC, then replace:
 
-### Option A — MPLAB X IDE
+```text
+firmware/hex/emergency_event_counter.hex
+```
 
-Build the project (**Ctrl+F11**) and copy the new `.hex` from the MPLAB build output folder to this directory, renaming it `emergency_event_counter.hex`.
+with the new generated HEX file.
 
-### Option B — Command line (Git Bash / PowerShell)
+### Example AVR-GCC Build Command
 
 ```bash
 AVR_GCC="C:/Program Files/Microchip/xc8/v3.10/avr/bin/avr-gcc.exe"
@@ -40,4 +55,4 @@ DFP_LIB="C:/Users/<user>/.mchp_packs/Microchip/ATmega_DFP/3.6.299/gcc/dev/atmega
   firmware/hex/main.elf firmware/hex/emergency_event_counter.hex
 ```
 
-Replace `<user>` with your Windows username. The `main.elf` intermediate file can be deleted after the `.hex` is confirmed correct.
+After confirming the HEX works, delete the intermediate `main.elf` file.

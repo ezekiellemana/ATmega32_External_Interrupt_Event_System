@@ -1,1 +1,5 @@
-Paste the short screen-recorded simulation video link here after recording the SimulIDE demonstration.
+Demonstration video is included in this repository at:
+
+media/demo_video.mp4
+
+The video demonstrates normal startup, event counting, emergency stop, lockout during emergency, recovery, and reset.

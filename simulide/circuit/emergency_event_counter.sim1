@@ -1,0 +1,67 @@
+<circuit version="1.1.0-SR2" rev="260312" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="MCU" CircId="mega32-8" mainComp="false" Show_id="true" Show_Val="false" Pos="132,-256" rotation="0" hflip="1" vflip="1" label="mega32-8" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="8 MHz" Program="../../firmware/hex/emergency_event_counter.hex" Auto_Load="true" saveEepr="true" Logic_Symbol="false" Wdt_enabled="false" MainMcu="true" SerialMon="-1" />
+
+<item itemtype="Push" CircId="Push-9" mainComp="false" Show_id="true" Show_Val="false" Pos="8,-128" rotation="0" hflip="1" vflip="1" label="Emergency button" idLabPos="-34.9633,17.0013" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1" />
+
+<item itemtype="Push" CircId="Push-11" mainComp="false" Show_id="true" Show_Val="false" Pos="8,-84" rotation="0" hflip="1" vflip="1" label="Event button " idLabPos="-25.6494,17.5667" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1" />
+
+<item itemtype="Push" CircId="Push-12" mainComp="false" Show_id="true" Show_Val="false" Pos="20,-216" rotation="0" hflip="1" vflip="1" label="Recovery button" idLabPos="-27.8762,22.2327" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1" />
+
+<item itemtype="Led" CircId="Led-17" mainComp="false" ShowProp="Color" Show_id="false" Show_Val="true" Pos="-44,-332" rotation="-180" hflip="1" vflip="1" label="Green LED" idLabPos="-16,-24" labelrot="0" valLabPos="12.2059,27.4226" valLabRot="180" Color="Green" Grounded="true" Threshold="3.5 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
+
+<item itemtype="Led" CircId="Led-19" mainComp="false" ShowProp="Color" Show_id="false" Show_Val="true" Pos="-96,-276" rotation="-90" hflip="1" vflip="1" label="RED LED" idLabPos="-16,-24" labelrot="0" valLabPos="-4.86607,-25.278" valLabRot="0" Color="Red" Grounded="true" Threshold="1.8 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
+
+<item itemtype="Resistor" CircId="Resistor-20" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="20,-332" rotation="0" hflip="1" vflip="1" label="Resistor-20" idLabPos="-16,-24" labelrot="0" valLabPos="-11.3634,-7.90982" valLabRot="0" Resistance="100 Ω" />
+
+<item itemtype="Ground" CircId="Ground-22" mainComp="false" Show_id="false" Show_Val="false" Pos="-100,-28" rotation="0" hflip="1" vflip="1" label="Ground-22" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Resistor" CircId="Resistor-26" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-80,-244" rotation="0" hflip="1" vflip="1" label="Resistor-26" idLabPos="-16,-24" labelrot="0" valLabPos="-11.6031,-18.9639" valLabRot="0" Resistance="100 Ω" />
+
+<item itemtype="AudioOut" CircId="AudioOut-29" mainComp="false" Show_id="true" Show_Val="false" Pos="-128,-148" rotation="0" hflip="1" vflip="1" label="Buzzer" idLabPos="-8.86607,15.9583" labelrot="0" valLabPos="-16,20" valLabRot="0" Buzzer="true" Impedance="8 Ω" Frequency="1 kHz" />
+
+<item itemtype="SerialTerm" CircId="SerialTerm-32" mainComp="false" Show_id="true" Show_Val="false" Pos="-68,-48" rotation="90" hflip="1" vflip="1" label="Serial Terminal" idLabPos="-10.3506,-32.7423" labelrot="0" valLabPos="-16,20" valLabRot="0" Baudrate="9600 _Bd" DataBits="8 _bits" StopBits="1 _bits" SerialMon="false" />
+
+<item itemtype="Voltage Source" CircId="Voltage Source-51" mainComp="false" ShowProp="MaxValue" Show_id="false" Show_Val="true" Pos="-44,-180" rotation="0" hflip="1" vflip="1" label="Voltage Source-51" idLabPos="-32,-48" labelrot="0" valLabPos="-8,30" valLabRot="0" Running="true" Value_Volt="5 V" MaxValue="5 V" MinValue="0 V" />
+
+<item itemtype="Node" CircId="Node-23" mainComp="false" Pos="-100,-44" />
+
+<item itemtype="Node" CircId="Node-24" mainComp="false" Pos="-100,-48" />
+
+<item itemtype="Node" CircId="Node-30" mainComp="false" Pos="-100,-64" />
+
+<item itemtype="Connector" uid="Connector-12" startpinid="Push-9-switch0pinN" endpinid="mega32-8-PORTD2" pointList="24,-128,124,-128" />
+
+<item itemtype="Connector" uid="Connector-14" startpinid="Push-11-switch0pinN" endpinid="mega32-8-PORTD3" pointList="24,-84,124,-84,124,-120" />
+
+<item itemtype="Connector" uid="Connector-30" startpinid="Ground-22-Gnd" endpinid="Node-23-0" pointList="-100,-44,-100,-44" />
+
+<item itemtype="Connector" uid="Connector-31" startpinid="Node-23-2" endpinid="Push-11-pinP0" pointList="-100,-44,-100,-84,-8,-84" />
+
+<item itemtype="Connector" uid="Connector-33" startpinid="Node-23-1" endpinid="Node-24-0" pointList="-100,-44,-100,-48" />
+
+<item itemtype="Connector" uid="Connector-34" startpinid="Node-24-2" endpinid="Push-9-pinP0" pointList="-100,-48,-100,-128,-8,-128" />
+
+<item itemtype="Connector" uid="Connector-38" startpinid="Resistor-26-rPin" endpinid="mega32-8-PORTB1" pointList="-64,-244,124,-244,124,-240" />
+
+<item itemtype="Connector" uid="Connector-48" startpinid="AudioOut-29-rPin" endpinid="Node-30-1" pointList="-144,-148,-144,-64,-100,-64" />
+
+<item itemtype="Connector" uid="Connector-50" startpinid="Node-30-2" endpinid="Push-12-pinP0" pointList="-100,-64,-100,-216,4,-216" />
+
+<item itemtype="Connector" uid="Connector-51" startpinid="SerialTerm-32-pin1" endpinid="mega32-8-PORTD1" pointList="-76,-72,-76,-136,124,-136" />
+
+<item itemtype="Connector" uid="Connector-58" startpinid="Node-24-1" endpinid="Node-30-0" pointList="-100,-48,-100,-64" />
+
+<item itemtype="Connector" uid="Connector-59" startpinid="Led-19-lPin" endpinid="Resistor-26-lPin" pointList="-96,-260,-96,-244" />
+
+<item itemtype="Connector" uid="Connector-60" startpinid="Led-17-lPin" endpinid="Resistor-20-lPin" pointList="-28,-332,4,-332" />
+
+<item itemtype="Connector" uid="Connector-91" startpinid="Voltage Source-51-outPin" endpinid="mega32-8-RST" pointList="-16,-164,76,-164,76,-184,124,-184" />
+
+<item itemtype="Connector" uid="Connector-92" startpinid="Resistor-20-rPin" endpinid="mega32-8-PORTB0" pointList="36,-332,124,-332,124,-248" />
+
+<item itemtype="Connector" uid="Connector-47" startpinid="AudioOut-29-lPin" endpinid="mega32-8-PORTB3" pointList="-144,-156,-144,-224,124,-224" />
+
+<item itemtype="Connector" uid="Connector-104" startpinid="Push-12-switch0pinN" endpinid="mega32-8-PORTB2" pointList="36,-216,124,-216,124,-232" />
+
+</circuit>

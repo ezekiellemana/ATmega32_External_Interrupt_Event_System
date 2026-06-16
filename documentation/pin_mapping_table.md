@@ -1,27 +1,30 @@
 # ATmega32 Pin Mapping Table
 
-## Signal Assignments
-
 | ATmega32 Pin | DIP-40 Pin # | Direction | Net Label | Connected Device | Notes |
 | --- | --- | --- | --- | --- | --- |
-| PD2 / INT0 | 16 | Input | EMERGENCY_INT0 | Push button → GND | Internal pull-up enabled |
-| PD3 / INT1 | 17 | Input | EVENT_INT1 | Push button / sensor → GND | Internal pull-up enabled |
-| PB2 / INT2 | 3 | Input | RECOVERY_INT2 | Push button → GND | Internal pull-up enabled |
-| PB0 | 1 | Output | LED_NORMAL | Green LED + 330 Ω → GND | HIGH = LED ON |
-| PB1 | 2 | Output | LED_STOP | Red LED + 330 Ω → GND | HIGH = LED ON |
-| PB3 | 4 | Output | BUZZER | Active buzzer → GND | HIGH = buzzer ON |
-| PD1 / TXD | 15 | Output | SERIAL_TX | USB-TTL adapter RX | 9600 baud, 8N1 |
-| RESET | 9 | Input | RESET | 10 kΩ to VCC; button to GND | Active LOW reset |
-| XTAL1 | 13 | Input | XTAL1 | 8 MHz crystal / resonator | |
-| XTAL2 | 14 | Output | XTAL2 | 8 MHz crystal / resonator | |
-| VCC | 10 | Power | +5V | Regulated 5 V supply | |
-| AVCC | 30 | Power | +5V | Regulated 5 V supply | Tie to VCC with 100 nF bypass |
-| GND | 11, 31 | Power | GND | Common ground | Both GND pins must be connected |
+| PB0 | 1 | Output | `LED_NORMAL` | R2 330 Ω → Green LED → GND | HIGH = normal LED ON |
+| PB1 | 2 | Output | `LED_STOP` | R3 330 Ω → Red LED → GND | HIGH = stop LED ON |
+| PB2 / INT2 | 3 | Input | `RECOVERY_INT2` | SW3 → GND, R7 10 kΩ → +5V | Recovery/reset interrupt |
+| PB3 | 4 | Output | `BUZZER` | R4 1 kΩ → Q1 base → BZ1 driver | HIGH = buzzer ON |
+| RESET | 9 | Input | `RESET` | R1 10 kΩ → +5V, reset button → GND | Active-LOW MCU reset |
+| VCC | 10 | Power | `+5V` | +5V zone, C1 100 nF to GND | Digital supply |
+| GND | 11 | Power | `GND` | GND zone | Ground |
+| XTAL1 | 13 | Input | `XTAL1` | Y1 8 MHz crystal, C3 22 pF to GND | Clock input |
+| XTAL2 | 14 | Output | `XTAL2` | Y1 8 MHz crystal, C4 22 pF to GND | Clock output |
+| PD1 / TXD | 15 | Output | `SERIAL_TX` | J1 pin 2 | UART transmit, 9600 baud |
+| PD2 / INT0 | 16 | Input | `EMERGENCY_INT0` | SW1 → GND, R5 10 kΩ → +5V | Emergency stop interrupt |
+| PD3 / INT1 | 17 | Input | `EVENT_INT1` | SW2 → GND, R6 10 kΩ → +5V | Event pulse interrupt |
+| AVCC | 30 | Power | `+5V` | +5V zone, C2 100 nF to GND | Must be tied to VCC |
+| GND | 31 | Power | `GND` | GND zone | Ground |
 
 ## Unused Pins
 
-All other ATmega32 pins (PA0–PA7, PC0–PC7, PD0, PD4–PD7, PB4–PB7) are unconnected in this design. In a production PCB, floating inputs should be pulled to a defined state to prevent spurious current draw.
+The remaining ATmega32 pins are not used in this project. They are marked as no-connect in the schematic where appropriate.
 
-## Power Bypass
+## Power Notes
 
-Place a 100 nF ceramic capacitor between VCC and GND as close to pin 10 as possible, and another 100 nF between AVCC (pin 30) and GND. These decouple high-frequency noise from the supply rails.
+- VCC and AVCC are both connected to +5V.
+- Both GND pins are connected to the GND zone.
+- C1 and C2 are 100 nF decoupling capacitors.
+- A B.Cu copper zone is used for GND.
+- An F.Cu copper zone is used for +5V.

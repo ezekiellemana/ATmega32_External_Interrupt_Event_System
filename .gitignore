@@ -1,11 +1,25 @@
-# Compiled intermediate build artifacts
+# Build artifacts
 *.elf
 *.o
 *.d
-
-# Build output directories
+*.map
+*.lst
+*.obj
+*.dep
 build/
 dist/
+
+# Diagnostic / temporary firmware outputs
+firmware/hex/diagnostic_test.*
+firmware/src/*backup*
+
+# KiCad local history and autosaves
+**/.history/
+*.kicad_prl
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*.bak
+*.tmp
 
 # IDE / toolchain cache
 .cache/
@@ -15,5 +29,5 @@ dist/
 Thumbs.db
 .DS_Store
 
-# NOTE: firmware/hex/emergency_event_counter.hex is intentionally NOT ignored.
-# The HEX file is required for SimulIDE simulation and project submission.
+# Required final HEX is intentionally tracked
+!firmware/hex/emergency_event_counter.hex

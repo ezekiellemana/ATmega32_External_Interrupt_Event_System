@@ -20,6 +20,7 @@ firmware/src/*backup*
 *.kicad_pcb-bak
 *.bak
 *.tmp
+~*.lck
 
 # IDE / toolchain cache
 .cache/

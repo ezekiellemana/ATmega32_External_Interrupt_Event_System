@@ -15,6 +15,7 @@ This repository contains the completed ATmega32 external interrupt emergency sto
 | Firmware flowchart | `documentation/firmware_flowchart.png` | Complete |
 | KiCad schematic | `kicad/schematic/kicad_schematic.png`, `.pdf`, and source schematic | Complete |
 | KiCad PCB layout | `kicad/pcb/kicad_pcb.png` and source PCB file | Complete |
+| KiCad PCB 3D view | `kicad/pcb/kicad_pcb_3D.png`, `kicad/pcb/kicad_pcb_3D_2.png` | Complete |
 | DRC result | `kicad/pcb/drc_zero_errors.png` | Complete - 0 violations / 0 unconnected items |
 | Gerber and drill files | `kicad/gerber/` and `ATmega32_Gerber_Files.zip` | Complete |
 | Firmware source code | `firmware/src/main.c` | Complete |
@@ -24,6 +25,24 @@ This repository contains the completed ATmega32 external interrupt emergency sto
 | Test results table | `documentation/test_results.md` | Complete |
 | Demonstration video | `media/demo_video.mp4` | Complete |
 | Final report | `documentation/final_report/CT_321_PBL_07_Group07_Final_Report.docx` and `.pdf` | Complete |
+
+---
+
+## Circuit and PCB Images
+
+### Schematic
+
+![KiCad schematic](kicad/schematic/kicad_schematic.png)
+
+### PCB Layout (2D)
+
+![KiCad PCB layout](kicad/pcb/kicad_pcb.png)
+
+### PCB 3D View
+
+![KiCad PCB 3D view](kicad/pcb/kicad_pcb_3D.png)
+
+![KiCad PCB 3D view - alternate angle](kicad/pcb/kicad_pcb_3D_2.png)
 
 ---
 

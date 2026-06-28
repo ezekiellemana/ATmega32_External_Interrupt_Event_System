@@ -12,19 +12,18 @@ This repository contains the completed ATmega32 external interrupt emergency sto
 | --- | --- | --- |
 | System block diagram | `documentation/block_diagram.png` | Complete |
 | ATmega32 pin mapping table | `documentation/pin_mapping_table.md` | Complete |
-| Firmware flowchart | `documentation/firmware_flowchart.png` | Complete |
-| KiCad schematic | `kicad/schematic/kicad_schematic.png`, `.pdf`, and source schematic | Complete |
-| KiCad PCB layout | `kicad/pcb/kicad_pcb.png` and source PCB file | Complete |
+| Firmware flowchart | `documentation/flowchart.png` | Complete |
+| KiCad schematic | `kicad/schematic/kicad_schematic.png`, `.pdf`, and `kicad/ATmega32_External_Interrupt_Event_System.kicad_sch` | Complete |
+| KiCad PCB layout | `kicad/pcb/kicad_pcb.png` and `kicad/ATmega32_External_Interrupt_Event_System.kicad_pcb` | Complete |
 | KiCad PCB 3D view | `kicad/pcb/kicad_pcb_3D.png`, `kicad/pcb/kicad_pcb_3D_2.png` | Complete |
 | DRC result | `kicad/pcb/drc_zero_errors.png` | Complete - 0 violations / 0 unconnected items |
-| Gerber and drill files | `kicad/gerber/` and `ATmega32_Gerber_Files.zip` | Complete |
+| Gerber and drill files | `kicad/gerber/` | Complete |
 | Firmware source code | `firmware/src/main.c` | Complete |
 | Compiled HEX file | `firmware/hex/emergency_event_counter.hex` | Complete |
 | SimulIDE circuit | `simulide/circuit/emergency_event_counter.sim1` | Complete |
 | SimulIDE screenshots | `simulide/screenshots/` | Complete - 7 tests captured |
 | Test results table | `documentation/test_results.md` | Complete |
 | Demonstration video | `media/demo_video.mp4` | Complete |
-| Final report | `documentation/final_report/CT_321_PBL_07_Group07_Final_Report.docx` and `.pdf` | Complete |
 
 ---
 
@@ -77,12 +76,14 @@ RESET: held HIGH during normal running
 ```text
 ATmega32_External_Interrupt_Event_System/
 ├── README.md
-├── FINAL_SUBMISSION_CHECKLIST.md
 ├── firmware/
 │   ├── src/main.c
+│   ├── include/
 │   └── hex/emergency_event_counter.hex
 ├── kicad/
-│   ├── ATmega32_External_Interrupt_Event_System/
+│   ├── ATmega32_External_Interrupt_Event_System.kicad_pro
+│   ├── ATmega32_External_Interrupt_Event_System.kicad_sch
+│   ├── ATmega32_External_Interrupt_Event_System.kicad_pcb
 │   ├── schematic/
 │   ├── pcb/
 │   └── gerber/
@@ -91,12 +92,10 @@ ATmega32_External_Interrupt_Event_System/
 │   └── screenshots/
 ├── documentation/
 │   ├── block_diagram.png
-│   ├── firmware_flowchart.png
+│   ├── flowchart.png
 │   ├── interrupt_configuration.md
 │   ├── pin_mapping_table.md
-│   ├── test_results.md
-│   ├── evidence/
-│   └── final_report/
+│   └── test_results.md
 └── media/
     ├── demo_video.mp4
     └── demonstration_video_link.txt

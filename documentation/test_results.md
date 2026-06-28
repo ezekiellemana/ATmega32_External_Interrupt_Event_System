@@ -15,7 +15,7 @@ The tests below were captured from the SimulIDE simulation using the final firmw
 ## Simulation evidence
 
 - Screenshots folder: `simulide/screenshots/`
-- Contact sheet: `documentation/evidence/simulide_screenshots_contact_sheet.jpg`
+- Contact sheet: `simulide/screenshots/screenshots_contact_sheet.jpg`
 - HEX file used: `firmware/hex/emergency_event_counter.hex`
 - MCU frequency used in SimulIDE: 8 MHz
 - Serial terminal setting: 9600 baud, 8 data bits, 1 stop bit

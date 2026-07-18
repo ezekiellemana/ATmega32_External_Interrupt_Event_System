@@ -23,6 +23,9 @@ This repository contains the completed ATmega32 external interrupt emergency sto
 | SimulIDE circuit | `simulide/circuit/emergency_event_counter.sim1` | Complete |
 | SimulIDE screenshots | `simulide/screenshots/` | Complete - 7 tests captured |
 | Test results table | `documentation/test_results.md` | Complete |
+| Final report DOCX | `documentation/final_report/CT_321_PBL_07_Group07_Final_Report.docx` | Complete |
+| Final report PDF | `documentation/final_report/CT_321_PBL_07_Group07_Final_Report.pdf` | Complete |
+| PowerPoint presentation | `documentation/CT_321_PBL_07_Group07_Presentation.pptx` | Complete |
 | Demonstration video | `media/demo_video.mp4` | Complete |
 
 ---
@@ -75,30 +78,34 @@ RESET: held HIGH during normal running
 
 ```text
 ATmega32_External_Interrupt_Event_System/
-├── README.md
-├── firmware/
-│   ├── src/main.c
-│   ├── include/
-│   └── hex/emergency_event_counter.hex
-├── kicad/
-│   ├── ATmega32_External_Interrupt_Event_System.kicad_pro
-│   ├── ATmega32_External_Interrupt_Event_System.kicad_sch
-│   ├── ATmega32_External_Interrupt_Event_System.kicad_pcb
-│   ├── schematic/
-│   ├── pcb/
-│   └── gerber/
-├── simulide/
-│   ├── circuit/emergency_event_counter.sim1
-│   └── screenshots/
-├── documentation/
-│   ├── block_diagram.png
-│   ├── flowchart.png
-│   ├── interrupt_configuration.md
-│   ├── pin_mapping_table.md
-│   └── test_results.md
-└── media/
-    ├── demo_video.mp4
-    └── demonstration_video_link.txt
+|-- README.md
+|-- firmware/
+|   |-- src/main.c
+|   |-- include/
+|   `-- hex/emergency_event_counter.hex
+|-- kicad/
+|   |-- ATmega32_External_Interrupt_Event_System.kicad_pro
+|   |-- ATmega32_External_Interrupt_Event_System.kicad_sch
+|   |-- ATmega32_External_Interrupt_Event_System.kicad_pcb
+|   |-- schematic/
+|   |-- pcb/
+|   `-- gerber/
+|-- simulide/
+|   |-- circuit/emergency_event_counter.sim1
+|   `-- screenshots/
+|-- documentation/
+|   |-- CT_321_PBL_07_Group07_Presentation.pptx
+|   |-- block_diagram.png
+|   |-- flowchart.png
+|   |-- interrupt_configuration.md
+|   |-- pin_mapping_table.md
+|   |-- test_results.md
+|   `-- final_report/
+|       |-- CT_321_PBL_07_Group07_Final_Report.docx
+|       `-- CT_321_PBL_07_Group07_Final_Report.pdf
+`-- media/
+    |-- demo_video.mp4
+    `-- demonstration_video_link.txt
 ```
 
 ---
